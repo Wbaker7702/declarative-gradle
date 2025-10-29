@@ -13,6 +13,12 @@ dependencies {
     implementation("org.gradle.toolchains:foojay-resolver:0.8.0")
 }
 
+// Compile targeting Java 17 (use current JDK with --release 17)
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
 testing {
     suites {
         @Suppress("UnstableApiUsage")

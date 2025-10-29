@@ -95,11 +95,8 @@ gradlePlugin {
     }
 }
 
-// Compile against Java 17 since Android requires Java 17 at minimum
+// Compile targeting Java 17 (use current JDK with --release 17)
 java {
     sourceCompatibility = JavaVersion.VERSION_17
     targetCompatibility = JavaVersion.VERSION_17
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
-    }
 }
