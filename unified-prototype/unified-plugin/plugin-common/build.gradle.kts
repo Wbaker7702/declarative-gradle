@@ -13,6 +13,12 @@ dependencies {
     implementation("commons-io:commons-io:2.15.1")
 }
 
+// Compile targeting Java 17 (use current JDK with --release 17)
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+
 testing {
     suites {
         val test by getting(JvmTestSuite::class) {
